@@ -1,0 +1,21 @@
+def buscar_calificacion(matriz, calificacion_objetivo):
+    for i, fila in enumerate(matriz):
+        for j, calificacion in enumerate(fila):
+            if calificacion == calificacion_objetivo:
+                return f"Calificación encontrada: Estudiante {i + 1}, Materia {j + 1}"
+    return "Calificación no encontrada"
+
+# Ejemplo de uso
+# Matriz de calificaciones (cada fila es un estudiante, cada columna es una materia)
+calificaciones = [
+    [85, 90, 78],  # Estudiante 1
+    [88, 92, 80],  # Estudiante 2
+    [91, 85, 89]   # Estudiante 3
+]
+
+# Buscar una calificación específica
+calificacion_objetivo = 80
+resultado = buscar_calificacion(calificaciones, calificacion_objetivo)
+print(resultado)
+
+   
